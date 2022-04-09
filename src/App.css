@@ -1,0 +1,11 @@
+.compo {
+    display: flex;
+}
+
+.compo img {
+    margin-left: 50px;
+    height: 400px;
+    width: 400px;
+    
+}
+
