@@ -1,9 +1,14 @@
 .compo {
     display: flex;
+    flex-direction: column;
 }
 
+
+
+
+
 .compo img {
-    margin-left: 50px;
+   
     height: 400px;
     width: 400px;
     

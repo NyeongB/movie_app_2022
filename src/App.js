@@ -1,11 +1,13 @@
 import React from "react";
 import Potato from "./potato";
+import PropTypes from "prop-types";
 import "./App.css";
 
-function Food({ name, picture }) {
+function Food({ name, picture, rating }) {
   return (
     <div className="compo">
       <h2>I like {name}.</h2>
+      <h4>{rating}/5.0</h4>
       <img src={picture} alt={name}></img>
     </div>
   );
@@ -50,9 +52,20 @@ function App() {
   ];
 
   const renderFood = (dish) => (
-    <Food key={dish.key} name={dish.name} picture={dish.image}></Food>
+    <Food
+      key={dish.key}
+      name={dish.name}
+      picture={dish.image}
+      rating={dish.rating}
+    ></Food>
   );
 
   return <div>{foodLike.map(renderFood)}</div>;
 }
+
+Food.propTypes = {
+  name: PropTypes.string.isRequired,
+  picture: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired,
+};
 export default App;
