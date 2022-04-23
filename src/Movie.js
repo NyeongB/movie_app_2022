@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function Movie({ title, year, summary, poster }) {
+function Movie({ title, year, summary, poster, genres }) {
   return (
     <div class="movie__data">
       <img src={poster} alt={title} title={title}></img>
@@ -17,6 +17,7 @@ Movie.prototype = {
   title: PropTypes.string.isRequired,
   summary: PropTypes.string.isRequired,
   poster: PropTypes.string.isRequired,
+  genres: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default Movie;
